@@ -4,7 +4,7 @@ resource "aws_vpc" "this" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    "name"       = "minha-vpc"
+    "name"       = "minha_vpc"
     "enviroment" = "dev"
     "managed-by" = "terraform"
   }
@@ -15,11 +15,11 @@ resource "aws_vpc" "this" {
 resource "aws_subnet" "this" {
   vpc_id                  = aws_vpc.this.id
   cidr_block              = "10.0.0.0/20"
-  availability_zone       = var.subnet-region
+  availability_zone       = var.subnet_region
   map_public_ip_on_launch = true
 
   tags = {
-    "name"       = "minha-subnet"
+    "name"       = "minha_subnet"
     "enviroment" = "dev"
     "managed-by" = "terraform"
   }

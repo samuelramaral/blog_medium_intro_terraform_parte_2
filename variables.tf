@@ -11,7 +11,7 @@ variable "region" {
 }
 
 #SUBNET - REGION
-variable "subnet-region" {
+variable "subnet_region" {
   type    = string
   default = "us-east-1a"
 }
